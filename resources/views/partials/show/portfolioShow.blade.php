@@ -49,15 +49,15 @@
                             value="{{ $portfolioDyns->icon1 }}" name="icon1" id="exampleInputPassword1">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label text-white">Icon 1</label>
+                        <label for="exampleInputPassword1" class="form-label text-white">Icon 2</label>
                         <input type="text" class="form-control"
                             value="{{ $portfolioDyns->icon2 }}" name="icon2" id="exampleInputPassword1">
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                        <button type="submit" class="btn btn-success mx-2 text-white">SAVE</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-                <button type="submit" class="btn btn-success mx-2 text-white">SAVE</button>
             </div>
         </div>
     </div>

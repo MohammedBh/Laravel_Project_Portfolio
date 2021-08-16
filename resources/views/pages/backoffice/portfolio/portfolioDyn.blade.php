@@ -51,22 +51,20 @@
                                     <form action="/formPortfolio" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Image</label>
-                                            <input type="text" value="{{ old('img_portfolio') }}" class="form-control"
-                                                name="img_portfolio" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <label for="exampleInputEmail1" class="form-label text-white">Icon</label>
+                                            <input type="text" class="form-control" value="{{ old('icon') }}" name="icon"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label text-white">Icon 1</label>
-                                            <input type="text" value="{{ old('icon1') }}" class="form-control"
-                                                name="icon1" id="exampleInputPassword1">
+                                            <label for="exampleInputPassword1" class="form-label text-white">Titre</label>
+                                            <input type="text" class="form-control" value="{{ old('titre') }}" name="titre"
+                                                id="exampleInputPassword1">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Icon 2</label>
-                                            <textarea type="text" value="{{ old('icon2') }}" class="form-control"
-                                                name="icon2" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp"></textarea>
+                                            <label for="exampleInputEmail1" class="form-label text-white">Paragraphe</label>
+                                            <textarea type="text" class="form-control" value="{{ old('para') }}" name="para"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary text-white">Ajouter</button>
                                     </form>
                                 </div>
                                 <div class="modal-footer">

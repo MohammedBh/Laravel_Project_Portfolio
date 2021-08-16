@@ -141,8 +141,8 @@ Route::put('/backoffice/services/{id}/update', [ServicesController::class, 'upda
 
 // services - Dynamic
 Route::get('/backoffice/servicesDyn', function(){
-    $servicesDyn = ServicesDyn::all();
-    return view('pages.backoffice.services.servicesDyn', compact('servicesDyn'));
+    $servicesDyns = ServicesDyn::all();
+    return view('pages.backoffice.services.servicesDyn', compact('servicesDyns'));
 })->name('servicesDyn');
 
 Route::get('/backoffice/services/{id}/show', [ServicesDynController::class, 'show']);
