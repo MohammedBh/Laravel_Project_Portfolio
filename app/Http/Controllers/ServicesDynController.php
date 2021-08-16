@@ -35,7 +35,19 @@ class ServicesDynController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'icon' => 'required | min:3 | max:15',
+            'titre' => ['required', 'min:3', 'max:15'],
+            'para' => ['required', 'min:10', 'max:35']
+        ]);
+
+        $store = new ServicesDyn();
+        $store->icon = $request->icon; 
+        $store->titre = $request->titre; 
+        $store->para = $request->para; 
+        $store->save();
+        return redirect('/backoffice/servicesDyn')->with('message', "Element created.");
+        
     }
 
     /**
@@ -44,9 +56,10 @@ class ServicesDynController extends Controller
      * @param  \App\Models\ServicesDyn  $servicesDyn
      * @return \Illuminate\Http\Response
      */
-    public function show(ServicesDyn $servicesDyn)
+    public function show($id)
     {
-        //
+        $showServices = ServicesDyn::find($id);
+        return view('pages.backoffice.services.servicesDyn', compact('showServices'));
     }
 
     /**
@@ -55,9 +68,9 @@ class ServicesDynController extends Controller
      * @param  \App\Models\ServicesDyn  $servicesDyn
      * @return \Illuminate\Http\Response
      */
-    public function edit(ServicesDyn $servicesDyn)
-    {
-        //
+    public function edit($id){
+        $editServices = ServicesDyn::find($id);
+        return view('pages.backoffice.services.servicesDyn', compact('editServices'));
     }
 
     /**
@@ -67,9 +80,13 @@ class ServicesDynController extends Controller
      * @param  \App\Models\ServicesDyn  $servicesDyn
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ServicesDyn $servicesDyn)
-    {
-        //
+    public function update($id, Request $request){
+        $update = ServicesDyn::find($id);
+        $update->icon = $request->icon; 
+        $update->titre = $request->titre; 
+        $update->para = $request->para; 
+        $update->save();
+        return redirect('/backoffice/servicesDyn');
     }
 
     /**
@@ -78,8 +95,10 @@ class ServicesDynController extends Controller
      * @param  \App\Models\ServicesDyn  $servicesDyn
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ServicesDyn $servicesDyn)
-    {
-        //
+    public function destroy($id){
+        $destroy = ServicesDyn::find($id);
+        $destroy -> delete();
+        return redirect('/backoffice/servicesDyn') ->with('messageDelete', "Element deleted.");
+    
     }
 }

@@ -14,7 +14,7 @@ class SkillsDynSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('skills_dynamics')->insert([
+        DB::table('skills_dyns')->insert([
             [   
             "span" => "HTML",
             "i" => "100%",

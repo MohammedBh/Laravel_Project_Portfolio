@@ -30,6 +30,7 @@ class CreateContactsTable extends Migration
             $table->string('formEmail');
             $table->string('formSubject');
             $table->string('formMessage');
+            $table->string('btn');
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PortfolioDynSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class PortfolioDynSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('portfolio_dynamics')->insert([
+        DB::table('portfolio_dyns')->insert([
             
             [
                 "img_portfolio" => "portfolio-1.jpg",

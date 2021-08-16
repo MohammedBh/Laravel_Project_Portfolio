@@ -67,9 +67,12 @@ class ServicesController extends Controller
      * @param  \App\Models\Services  $services
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Services $services)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Services::find($id);
+        $update->servicesTitle = $request->servicesTitle;
+        $update->p = $request->p;
+        $update->save();
+        return redirect('/backoffice/services');
     }
 
     /**

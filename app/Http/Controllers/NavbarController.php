@@ -67,9 +67,23 @@ class NavbarController extends Controller
      * @param  \App\Models\Navbar  $navbar
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Navbar $navbar)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Navbar::find($id);
+        $update->img = $request->img;
+        $update->h1 = $request->h1;
+        $update->icon1 = $request->icon1;
+        $update->icon2 = $request->icon2;
+        $update->icon3 = $request->icon3;
+        $update->icon4 = $request->icon4;
+        $update->icon5 = $request->icon5;
+        $update->nav1 = $request->nav1;
+        $update->nav2 = $request->nav2;
+        $update->nav3 = $request->nav3;
+        $update->nav4 = $request->nav4;
+        $update->nav5 = $request->nav5;
+        $update->btn_icon = $request->btn_icon;
+        $update->save();
+        return redirect('/backoffice/navbar');
     }
 
     /**

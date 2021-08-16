@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hero;
+use Database\Seeders\HeroSeeder;
 use Illuminate\Http\Request;
 
 class HeroController extends Controller
@@ -67,9 +68,12 @@ class HeroController extends Controller
      * @param  \App\Models\Hero  $hero
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hero $hero)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Hero::find($id);
+        $update->h1 = $request->h1;
+        $update->p = $request->p;
+        $update->save();
+        return redirect('/backoffice/hero');
     }
 
     /**

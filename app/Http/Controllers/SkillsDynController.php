@@ -35,7 +35,19 @@ class SkillsDynController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'span' => 'required | min:3 | max:15',
+            'i' => ['required', 'min:1', 'max:10'],
+            'aria' => ['required', 'min:1', 'max:15']
+        ]);
+
+        $store = new SkillsDyn();
+        $store->span = $request->span; 
+        $store->i = $request->i; 
+        $store->aria = $request->aria; 
+        $store->save();
+        return redirect('/backoffice/skillsDyn')->with('message', "Element created.");
+        
     }
 
     /**
@@ -44,20 +56,27 @@ class SkillsDynController extends Controller
      * @param  \App\Models\SkillsDyn  $skillsDyn
      * @return \Illuminate\Http\Response
      */
-    public function show(SkillsDyn $skillsDyn)
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\SkillsDynamic  $skillsDynamic
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        //
+        $showSkills = SkillsDyn::find($id);
+        return view('pages.backoffice.skills.skillsDyn', compact('showSkills'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SkillsDyn  $skillsDyn
+     * @param  \App\Models\SkillsDynamic  $skillsDynamic
      * @return \Illuminate\Http\Response
      */
-    public function edit(SkillsDyn $skillsDyn)
-    {
-        //
+    public function edit($id){
+        $editSkills = SkillsDyn::find($id);
+        return view('pages.backoffice.skills.skillsDyn', compact('editSkills'));
     }
 
     /**
@@ -67,19 +86,25 @@ class SkillsDynController extends Controller
      * @param  \App\Models\SkillsDyn  $skillsDyn
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SkillsDyn $skillsDyn)
-    {
-        //
+    public function update($id, Request $request){
+        $update = SkillsDyn::find($id);
+        $update->span = $request->span; 
+        $update->i = $request->i; 
+        $update->aria = $request->aria; 
+        $update->save();
+        return redirect('/backoffice/skillsDyn');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SkillsDyn  $skillsDyn
+     * @param  \App\Models\SkillsDynamic  $skillsDynamic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SkillsDyn $skillsDyn)
-    {
-        //
+    public function destroy($id){
+        $destroy = SkillsDyn::find($id);
+        $destroy -> delete();
+        return redirect('/backoffice/skillsDyn') ->with('messageDelete', "Element deleted.");
+    
     }
 }

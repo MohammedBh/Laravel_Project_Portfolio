@@ -67,9 +67,26 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Contact::find($id);
+        $update->contactTitle = $request->contactTitle;
+        $update->p = $request->p;
+        $update->icon1 = $request->icon1;
+        $update->titre1 = $request->titre1;
+        $update->p1 = $request->p1;
+        $update->icon2 = $request->icon2;
+        $update->titre2 = $request->titre2;
+        $update->p2 = $request->p2;
+        $update->icon3 = $request->icon3;
+        $update->titre3 = $request->titre3;
+        $update->p3 = $request->p3;
+        $update->formName = $request->formName;
+        $update->formEmail = $request->formEmail;
+        $update->formSubject = $request->formSubject;
+        $update->formMessage = $request->formMessage;
+        $update->btn = $request->btn;
+        $update->save();
+        return redirect('/backoffice/contact');
     }
 
     /**

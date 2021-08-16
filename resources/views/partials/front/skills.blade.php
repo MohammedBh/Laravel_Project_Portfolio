@@ -1,65 +1,71 @@
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-        <div class="container">
-  
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+<!-- ======= Skills Section ======= -->
+<section id="skills" class="skills section-bg">
+  <div class="container">
+
+      <div class="section-title">
+          <h2>{{$skills[0]->skillsTitle}}</h2>
+          <p>{{$skills[0]->p1}}</p>
+      </div>
+
+      <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+              <div class="progress">
+                  <span class="skill">{{$skillsDyn[0]->span}}<i class="val">{{$skillsDyn[0]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[0]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
+              </div>
+
+              <div class="progress">
+                  <span class="skill">{{$skillsDyn[1]->span}}<i class="val">{{$skillsDyn[1]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[1]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
+              </div>
+
+              <div class="progress">
+                  <span class="skill">{{$skillsDyn[2]->span}} <i class="val">{{$skillsDyn[2]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[2]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
+              </div>
+
           </div>
-  
-          <div class="row skills-content">
-  
-            <div class="col-lg-6" data-aos="fade-up">
-  
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
               <div class="progress">
-                <span class="skill">HTML <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                  <span class="skill">{{$skillsDyn[3]->span}} <i class="val">{{$skillsDyn[3]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[3]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
               </div>
-  
+
               <div class="progress">
-                <span class="skill">CSS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                  <span class="skill">{{$skillsDyn[4]->span}} <i class="val">{{$skillsDyn[4]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[4]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
               </div>
-  
+
               <div class="progress">
-                <span class="skill">JavaScript <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                  <span class="skill">{{$skillsDyn[5]->span}} <i class="val">{{$skillsDyn[5]->i}}</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{$skillsDyn[5]->aria}}" aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                  </div>
               </div>
-  
-            </div>
-  
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-  
-              <div class="progress">
-                <span class="skill">PHP <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-  
-              <div class="progress">
-                <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-  
-              <div class="progress">
-                <span class="skill">Photoshop <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-  
-            </div>
-  
+
           </div>
-  
-        </div>
-      </section><!-- End Skills Section -->
+
+      </div>
+
+  </div>
+</section><!-- End Skills Section -->

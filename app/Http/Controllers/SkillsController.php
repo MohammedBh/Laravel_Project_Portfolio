@@ -67,9 +67,12 @@ class SkillsController extends Controller
      * @param  \App\Models\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Skills $skills)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Skills::find($id);
+        $update->skillsTitle = $request->skillsTitle;
+        $update->p1 = $request->p1;
+        $update->save();
+        return redirect('/backoffice/skills');
     }
 
     /**

@@ -67,9 +67,16 @@ class PortfolioController extends Controller
      * @param  \App\Models\Portfolio  $portfolio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Portfolio $portfolio)
-    {
-        //
+    public function update($id, Request $request){
+        $update = Portfolio::find($id);
+        $update->portfolioTitle = $request->portfolioTitle;
+        $update->p = $request->p;
+        $update->li1 = $request->li1;
+        $update->li2 = $request->li2;
+        $update->li3 = $request->li3;
+        $update->li4 = $request->li4;
+        $update->save();
+        return redirect('/backoffice/portfolio');
     }
 
     /**

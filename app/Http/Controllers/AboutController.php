@@ -67,9 +67,32 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
-    {
-        //
+    public function update($id, Request $request){
+        $update = About::find($id);
+        $update->aboutTitle = $request->aboutTitle;
+        $update->p1 = $request->p1;
+        $update->img = $request->img;
+        $update->h3 = $request->h3;
+        $update->p2 = $request->p2;
+        $update->li_birthday = $request->li_birthday;
+        $update->birthday = $request->birthday;
+        $update->li_website = $request->li_website;
+        $update->website = $request->website;
+        $update->li_phone = $request->li_phone;
+        $update->phone = $request->phone;
+        $update->li_city = $request->li_city;
+        $update->city = $request->city;
+        $update->li_age = $request->li_age;
+        $update->age = $request->age;
+        $update->li_degree = $request->li_degree;
+        $update->degree = $request->degree;
+        $update->li_email = $request->li_email;
+        $update->email = $request->email;
+        $update->li_freelance = $request->li_freelance;
+        $update->freelance = $request->freelance;
+        $update->p3 = $request->p3;
+        $update->save();
+        return redirect('/backoffice/about');
     }
 
     /**

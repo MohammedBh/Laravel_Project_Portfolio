@@ -14,7 +14,7 @@ class ServicesDynSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('services_dynamics')->insert([
+        DB::table('services_dyns')->insert([
             [
             "icon" =>"icofont-computer",
             "titre" => "Lorem Ipsum",

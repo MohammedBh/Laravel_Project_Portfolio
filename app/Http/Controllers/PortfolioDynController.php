@@ -35,7 +35,19 @@ class PortfolioDynController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'img_portfolio' => 'required | min:3 | max:15',
+            'icon1' => ['required', 'min:3', 'max:15'],
+            'icon2' => ['required', 'min:5', 'max:15']
+        ]);
+
+        $store = new PortfolioDyn();
+        $store->img_portfolio = $request->img_portfolio;
+        $store->icon1 = $request->icon1;
+        $store->icon2 = $request->icon2; 
+        $store->save();
+        return redirect('/backoffice/portfolio-dyn')->with('message', "Element created.");
+        
     }
 
     /**
@@ -44,9 +56,10 @@ class PortfolioDynController extends Controller
      * @param  \App\Models\PortfolioDyn  $portfolioDyn
      * @return \Illuminate\Http\Response
      */
-    public function show(PortfolioDyn $portfolioDyn)
+    public function show($id)
     {
-        //
+        $showPortfolio = PortfolioDyn::find($id);
+        return view('pages.backoffice.portfolio.portfolioDyn', compact('showPortfolio'));
     }
 
     /**
@@ -55,9 +68,9 @@ class PortfolioDynController extends Controller
      * @param  \App\Models\PortfolioDyn  $portfolioDyn
      * @return \Illuminate\Http\Response
      */
-    public function edit(PortfolioDyn $portfolioDyn)
-    {
-        //
+    public function edit($id){
+        $editPortfolio = PortfolioDyn::find($id);
+        return view('pages.backoffice.portfolio.portfolioDyn', compact('editPortfolio'));
     }
 
     /**
@@ -67,9 +80,13 @@ class PortfolioDynController extends Controller
      * @param  \App\Models\PortfolioDyn  $portfolioDyn
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PortfolioDyn $portfolioDyn)
-    {
-        //
+    public function update($id, Request $request){
+        $update = PortfolioDyn::find($id);
+        $update->img_portfolio = $request->img_portfolio; 
+        $update->icon1 = $request->icon1; 
+        $update->icon2 = $request->icon2; 
+        $update->save();
+        return redirect('/backoffice/portfolioDyn');
     }
 
     /**
@@ -78,8 +95,9 @@ class PortfolioDynController extends Controller
      * @param  \App\Models\PortfolioDyn  $portfolioDyn
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PortfolioDyn $portfolioDyn)
-    {
-        //
+    public function destroy($id){
+        $destroy = PortfolioDyn::find($id);
+        $destroy -> delete();
+        return redirect('/backoffice/portfolioDyn') ->with('messageDelete', "Element deleted.");
     }
 }
