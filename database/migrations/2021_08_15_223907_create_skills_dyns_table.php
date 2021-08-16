@@ -15,6 +15,9 @@ class CreateSkillsDynsTable extends Migration
     {
         Schema::create('skills_dyns', function (Blueprint $table) {
             $table->id();
+            $table->string('span');
+            $table->string('i');
+            $table->string('aria');
             $table->timestamps();
         });
     }

@@ -15,6 +15,9 @@ class CreateServicesDynsTable extends Migration
     {
         Schema::create('services_dyns', function (Blueprint $table) {
             $table->id();
+            $table->string('icon');
+            $table->string('titre');
+            $table->string('para');
             $table->timestamps();
         });
     }

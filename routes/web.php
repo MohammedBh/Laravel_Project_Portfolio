@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\StaticContentController;
+use App\Http\Controllers\BackofficeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/portfolio-details', function () {
-    return view('pages.portfolio-details');
-})->name('portfolio-details');
-
-Route::get('/inner-page', function () {
-    return view('pages.inner-page');
-})->name('inner-page');
-
-// BACK OFFICE
-Route::get('/backoffice/dashboard', function () {
-    return view('pages.backoffice.backofficeHome');
-})->name('dashboard');
-
-Route::get('/backoffice/static/content', [StaticContentController::class, 'index'])->name('staticContent');
+Route::get('/backoffice', [BackofficeController::class, 'index']);

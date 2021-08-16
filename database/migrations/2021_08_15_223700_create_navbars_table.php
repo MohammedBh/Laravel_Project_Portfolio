@@ -15,6 +15,19 @@ class CreateNavbarsTable extends Migration
     {
         Schema::create('navbars', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
+            $table->string('h1');
+            $table->string('icon1');
+            $table->string('icon2');
+            $table->string('icon3');
+            $table->string('icon4');
+            $table->string('icon5');
+            $table->string('nav1');
+            $table->string('nav2');
+            $table->string('nav3');
+            $table->string('nav4');
+            $table->string('nav5');
+            $table->string('btn_icon');
             $table->timestamps();
         });
     }

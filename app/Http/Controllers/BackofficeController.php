@@ -14,8 +14,7 @@ class BackofficeController extends Controller
      */
     public function index()
     {
-        $navbar = 
-        return view('pages.backoffice.backoffice', compact(''));
+        return view('pages.backoffice.backoffice');
     }
 
     /**
