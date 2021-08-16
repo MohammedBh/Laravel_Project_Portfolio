@@ -7,85 +7,43 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <button type="button" class="bg-danger btn btn-close text-white" data-dismiss="modal"
                 aria-label="Close">X</button>
         </div>
-        <form action="/backoffice/portfolio/{{ $portfolio->id }}/update" method="POST">
+        <form action="/backoffice/portfolio/{{ $portfolios->id }}/update" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Image</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->img }}" name="img"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label text-white">Titre</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->h1 }}" name="h1"
+                    value="{{ $portfolios->portfolioTitle }}" name="portfolioTitle"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 1</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Paragraphe</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->icon1 }}" name="icon1"
+                    value="{{ $portfolios->p }}" name="p"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white"> Icon 2 </label>
+                <label for="exampleInputEmail1" class="form-label text-white">li 1</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->icon2 }}" name="icon2"
+                    value="{{ $portfolios->li1 }}" name="li1"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 3</label>
+                <label for="exampleInputEmail1" class="form-label text-white">li 2</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->icon3 }}" name="icon3"
+                    value="{{ $portfolios->li2 }}" name="li2"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 4</label>
+                <label for="exampleInputEmail1" class="form-label text-white">li 3</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->icon4 }}" name="icon4"
+                    value="{{ $portfolios->li3 }}" name="li3"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 5</label>
+                <label for="exampleInputEmail1" class="form-label text-white">li 4</label>
                 <input type="text" class="form-control"
-                    value="{{ $portfolio->icon5 }}" name="icon5"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 1</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->nav1 }}" name="nav1"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 2</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->nav2 }}" name="nav2"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 3</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->nav3 }}" name="nav3"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 4</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->nav4 }}" name="nav4"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 5</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->nav5 }}" name="nav5"
-                    id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Button</label>
-                <input type="text" class="form-control"
-                    value="{{ $portfolio->btn_icon }}" name="btn_icon"
+                    value="{{ $portfolios->li4 }}" name="li4"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             

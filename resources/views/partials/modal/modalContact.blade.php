@@ -7,85 +7,97 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <button type="button" class="bg-danger btn btn-close text-white" data-dismiss="modal"
                 aria-label="Close">X</button>
         </div>
-        <form action="/backoffice/contact/{{ $contact->id }}/update" method="POST">
+        <form action="/backoffice/contact/{{ $contacts->id }}/update" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Image</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Titre</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->img }}" name="img"
+                    value="{{ $contacts->contactTitle }}" name="contactTitle"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Titre</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Paragraphe</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->h1 }}" name="h1"
+                    value="{{ $contacts->p }}" name="p"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label text-white">Icon 1</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->icon1 }}" name="icon1"
+                    value="{{ $contacts->icon1 }}" name="icon1"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white"> Icon 2 </label>
+                <label for="exampleInputEmail1" class="form-label text-white">Titre 1 </label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->icon2 }}" name="icon2"
+                    value="{{ $contacts->titre1 }}" name="titre1"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 3</label>
+                <label for="exampleInputEmail1" class="form-label text-white">p1 </label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->icon3 }}" name="icon3"
+                    value="{{ $contacts->p1 }}" name="p1"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 4</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Icon2</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->icon4 }}" name="icon4"
+                    value="{{ $contacts->icon2 }}" name="icon2"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Icon 5</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Titre2</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->icon5 }}" name="icon5"
+                    value="{{ $contacts->titre2 }}" name="titre2"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 1</label>
+                <label for="exampleInputEmail1" class="form-label text-white">p2</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->nav1 }}" name="nav1"
+                    value="{{ $contacts->p2 }}" name="p2"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 2</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Icon3</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->nav2 }}" name="nav2"
+                    value="{{ $contacts->icon3 }}" name="icon3"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 3</label>
+                <label for="exampleInputEmail1" class="form-label text-white">Titre3</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->nav3 }}" name="nav3"
+                    value="{{ $contacts->titre3 }}" name="titre3"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 4</label>
+                <label for="exampleInputEmail1" class="form-label text-white">p3</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->nav4 }}" name="nav4"
+                    value="{{ $contacts->p3 }}" name="p3"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Nav link 5</label>
+                <label for="exampleInputEmail1" class="form-label text-white">FormName</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->nav5 }}" name="nav5"
+                    value="{{ $contacts->formName }}" name="formName"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label text-white">Button</label>
+                <label for="exampleInputEmail1" class="form-label text-white">FormEmail</label>
                 <input type="text" class="form-control"
-                    value="{{ $contact->btn_icon }}" name="btn_icon"
+                    value="{{ $contacts->formEmail }}" name="formEmail"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-white">FormSubject</label>
+                <input type="text" class="form-control"
+                    value="{{ $contacts->formSubject }}" name="formSubject"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-white">FormMessage</label>
+                <input type="text" class="form-control"
+                    value="{{ $contacts->formMessage }}" name="formMessage"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             

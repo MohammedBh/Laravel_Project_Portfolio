@@ -37,7 +37,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label text-white">Titre 2 </label>
                 <input type="text" class="form-control"
-                    value="{{ $about->p2 }}" name="h3"
+                    value="{{ $about->p2 }}" name="p2"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">

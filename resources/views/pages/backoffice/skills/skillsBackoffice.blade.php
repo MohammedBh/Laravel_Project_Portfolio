@@ -19,30 +19,27 @@
                             <h4 class="card-title"> Simple Table</h4>
                         </div>
                         <div class="card-body">
-                            <form action="/formServices" method="POST">
-                                @csrf
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class=" text-primary">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Titre</th>
+                                            <th scope="col">Paragraphe</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($skillss as $skills)
                                             <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Titre</th>
-                                                <th scope="col">Paragraphe</th>
+                                                <th scope="row">{{ $skills->id }}</th>
+                                                <td>{{ $skills->skillsTitle }}</td>
+                                                <td>{{ $skills->p1 }}</td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($skillss as $skills)
-                                                <tr>
-                                                    <th scope="row">{{ $skills->id }}</th>
-                                                    <td>{{ $skills->skillsTitle }}</td>
-                                                    <td>{{ $skills->p1 }}</td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                        @include('partials.modal.modalSkills')
-                                    </table>
-                                </div>
-                            </form>
+                                        @endforeach
+                                    </tbody>
+                                    @include('partials.modal.modalSkills')
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <a class="btn btn-primary text-white" href="/backoffice/skills/{{ $skills->id }}/edit"

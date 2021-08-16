@@ -3,10 +3,10 @@
     @include('partials.backoffice.dashboard')
     <div class="main-panel">
         <!-- Navbar -->
-        <nav class="hero hero-expand-lg hero-absolute fixed-top hero-transparent">
+        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
-                <div class="hero-wrapper">
-                    <a class="hero-brand" href="javascript:;">Home</a>
+                <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="javascript:;">Home</a>
                 </div>
             </div>
         </nav>
