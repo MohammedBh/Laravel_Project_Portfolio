@@ -23,7 +23,7 @@
             @foreach ($portfolioDyn as $item)
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="{{ asset('img/portfolio/'.$item->img_portfolio)) }}" class="img-fluid" alt="">
+                        <img src="{{ asset('img/portfolio/'.$item->img_portfolio) }}" class="img-fluid" alt="">
                         <div class="portfolio-links">
                             <a href="{{ asset('img/portfolio/'.$item->img_portfolio) }}" data-gall="portfolioGallery"
                                 class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>

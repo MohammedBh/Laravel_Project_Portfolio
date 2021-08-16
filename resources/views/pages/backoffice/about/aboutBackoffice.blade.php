@@ -3,10 +3,10 @@
     @include('partials.backoffice.dashboard')
     <div class="main-panel">
         <!-- Navbar -->
-        <nav class="about about-expand-lg about-absolute fixed-top about-transparent">
+        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
-                <div class="about-wrapper">
-                    <a class="about-brand" href="javascript:;">Home</a>
+                <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="javascript:;">About - Static</a>
                 </div>
             </div>
         </nav>
@@ -15,9 +15,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title"> Simple Table</h4>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">

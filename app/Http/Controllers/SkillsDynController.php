@@ -89,8 +89,7 @@ class SkillsDynController extends Controller
     public function update($id, Request $request){
         $update = SkillsDyn::find($id);
         $update->span = $request->span; 
-        $update->i = $request->i; 
-        $update->aria = $request->aria; 
+        $update->pourcentage = $request->pourcentage;
         $update->save();
         return redirect('/backoffice/skillsDyn');
     }

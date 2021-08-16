@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Home</a>
+                    <a class="navbar-brand" href="javascript:;">Portfolio - Static</a>
                 </div>
             </div>
         </nav>

@@ -38,7 +38,7 @@
             <li>
                 <a class="text-danger" href="{{route('skills')}}">
                     <i class="nc-icon nc-tile-56 text-danger"></i>
-                    <p class="">Skils</p>
+                    <p class="">Skills</p>
                 </a>
             </li>
             <li>

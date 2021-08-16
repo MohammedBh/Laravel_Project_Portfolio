@@ -25,19 +25,57 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Home</a>
+                    <a class="navbar-brand" href="javascript:;">Skills - Dynamic</a>
                 </div>
             </div>
         </nav>
         <!-- End Navbar -->
         <div class="text-center mb-5">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Ajouter un service
-            </button>
         </div>
         <div class="content">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            ADD ELEMENT
+                        </button>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content bg-secondary">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-white" id="exampleModalLabel">SKILLS - DYNAMIC</h5>
+                                </div>
+                                <div class="modal-body model-lg">
+                                    <form action="/formSkills" method="POST">
+                                        @csrf
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label text-white">Span</label>
+                                            <input type="text" class="form-control" value="{{ old('span') }}" name="span"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1"
+                                                class="form-label text-white">Pourcentage</label>
+                                            <input type="text" class="form-control" value="{{ old('i') }}" name="i"
+                                                id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label text-white">Aria</label>
+                                            <textarea type="text" class="form-control" value="{{ old('aria') }}"
+                                                name="aria" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary mx-2"
+                                        data-dismiss="modal">CANCEL</button>
+                                    <button type="submit" class="btn btn-primary text-white">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title"> Simple Table</h4>
@@ -56,18 +94,33 @@
                                         @foreach ($skillsDyns as $skillsDyns)
                                             <tr>
                                                 <th scope="row">{{ $skillsDyns->id }}</th>
-                                                <td>{{ $skillsDyns->skillsTitle }}</td>
-                                                <td>{{ $skillsDyns->p1 }}</td>
-                                            </tr>
+                                                <td>{{ $skillsDyns->span }}</td>
+                                                <td>{{ $skillsDyns->pourcentage }} %</td>
+                                            
+                                            <td>
+                                                <form action="/backoffice/skillsDeletec/{{ $skillsDyns->id }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger text-white rounded-1"
+                                                        type="submit">DELETE</button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <button href="/backoffice/skills/{{ $skillsDyns->id }}/show"
+                                                    class="btn btn-warning text-white my-2" data-toggle="modal"
+                                                    data-target="#exampleModalToggle_{{ $skillsDyns->id }}"
+                                                    role="button">SHOW</button>
+                                            </td>
+                                            @include('partials.show.skillsShow')
+                                        </tr>
                                         @endforeach
                                     </tbody>
-                                    @include('partials.modal.modalSkills')
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary text-white" href="/backoffice/skills/{{ $skills->id }}/edit"
-                        data-toggle="modal" data-target="#exampleModal">EDIT</a>
+                    {{-- <a class="btn btn-primary text-white" href="/backoffice/skills/{{ $skillsDyns->id }}/edit"
+                        data-toggle="modal" data-target="#exampleModal">EDIT</a> --}}
                 </div>
             </div>
         </div>

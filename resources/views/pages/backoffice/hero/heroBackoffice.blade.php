@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Home</a>
+                    <a class="navbar-brand" href="javascript:;">Hero - Static</a>
                 </div>
             </div>
         </nav>
@@ -15,9 +15,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title"> Simple Table</h4>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">
@@ -29,20 +26,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($heros as $hero)
-                                        <tr>
-                                            <th scope="row">{{ $hero->id }}</th>
-                                            <td>{{ $hero->h1 }}</td>
-                                            <td>{{ $hero->p }}</td>
-                                        </tr>
+                                        @foreach ($heros as $heros)
+                                            <tr>
+                                                <th scope="row">{{ $heros->id }}</th>
+                                                <td>{{ $heros->h1 }}</td>
+                                                <td>{{ $heros->p }}</td>
+                                            </tr>
                                         @endforeach
                                     </tbody>
+                                    @include('partials.modal.modalHero')
                                 </table>
-                                @include('partials.modal.modalHero')
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary text-white" href="/backoffice/hero/{{ $hero->id }}/edit"
+                    <a class="btn btn-primary text-white" href="/backoffice/hero/{{ $heros->id }}/edit"
                         data-toggle="modal" data-target="#exampleModal">EDIT</a>
                 </div>
             </div>

@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index'])->name('welcome')->name('welcome');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 Route::get('/backoffice/home', [BackofficeController::class, 'index'])->name('backoffice');
 
@@ -75,8 +75,8 @@ Route::get('/backoffice/contact', function () {
     return view('pages.backoffice.contact.contactBackoffice', compact('contacts'));
 })->name('contact');
 
-Route::get('/contact/{id}/edit', [ContactController::class, 'edit']);
-Route::put('/contact/{id}/update', [ContactController::class, 'update']);
+Route::get('/backoffice/contact/{id}/edit', [ContactController::class, 'edit']);
+Route::put('/backoffice/contact/{id}/update', [ContactController::class, 'update']);
 
 // Facts - Static
 Route::get('/backoffice/facts', function(){

@@ -3,7 +3,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
     <div class="modal-content bg-info p-5 container w-75">
         <div class="modal-header">
-            <h5 class="modal-title text-white" id="exampleModalLabel">NAVBAR</h5>
+            <h5 class="modal-title text-white" id="exampleModalLabel">CONTACT</h5>
             <button type="button" class="bg-danger btn btn-close text-white" data-dismiss="modal"
                 aria-label="Close">X</button>
         </div>
@@ -98,6 +98,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <label for="exampleInputEmail1" class="form-label text-white">FormMessage</label>
                 <input type="text" class="form-control"
                     value="{{ $contacts->formMessage }}" name="formMessage"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-white">FormMessage</label>
+                <input type="text" class="form-control"
+                    value="{{ $contacts->btn }}" name="btn"
                     id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             

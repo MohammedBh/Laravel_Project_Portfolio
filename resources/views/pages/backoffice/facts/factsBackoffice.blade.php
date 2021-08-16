@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Home</a>
+                    <a class="navbar-brand" href="javascript:;">Facts - Static</a>
                 </div>
             </div>
         </nav>
@@ -15,9 +15,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title"> Simple Table</h4>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">

@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Home</a>
+                    <a class="navbar-brand" href="javascript:;">Navbar - Static</a>
                 </div>
             </div>
         </nav>
@@ -15,9 +15,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title"> Simple Table</h4>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">
@@ -40,22 +37,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($navbars as $navbar)
+                                        @foreach ($navbars as $navbars)
                                             <tr>
-                                                <th scope="row">{{ $navbar->id }}</th>
-                                                <td>{{ $navbar->img }}</td>
-                                                <td>{{ $navbar->h1 }}</td>
-                                                <td>{{ $navbar->icon1 }}</td>
-                                                <td>{{ $navbar->icon2 }}</td>
-                                                <td>{{ $navbar->icon3 }}</td>
-                                                <td>{{ $navbar->icon4 }}</td>
-                                                <td>{{ $navbar->icon5 }}</td>
-                                                <td>{{ $navbar->nav1 }}</td>
-                                                <td>{{ $navbar->nav2 }}</td>
-                                                <td>{{ $navbar->nav3 }}</td>
-                                                <td>{{ $navbar->nav4 }}</td>
-                                                <td>{{ $navbar->nav5 }}</td>
-                                                <td>{{ $navbar->btn_icon }}</td>
+                                                <th scope="row">{{ $navbars->id }}</th>
+                                                <td>{{ $navbars->img }}</td>
+                                                <td>{{ $navbars->h1 }}</td>
+                                                <td>{{ $navbars->icon1 }}</td>
+                                                <td>{{ $navbars->icon2 }}</td>
+                                                <td>{{ $navbars->icon3 }}</td>
+                                                <td>{{ $navbars->icon4 }}</td>
+                                                <td>{{ $navbars->icon5 }}</td>
+                                                <td>{{ $navbars->nav1 }}</td>
+                                                <td>{{ $navbars->nav2 }}</td>
+                                                <td>{{ $navbars->nav3 }}</td>
+                                                <td>{{ $navbars->nav4 }}</td>
+                                                <td>{{ $navbars->nav5 }}</td>
+                                                <td>{{ $navbars->btn_icon }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -64,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary text-white" href="/backoffice/navbar/{{ $navbar->id }}/edit"
+                    <a class="btn btn-primary text-white" href="/backoffice/navbar/{{ $navbars->id }}/edit"
                         data-toggle="modal" data-target="#exampleModal">EDIT</a>
                 </div>
             </div>

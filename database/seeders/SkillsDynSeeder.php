@@ -17,33 +17,27 @@ class SkillsDynSeeder extends Seeder
         DB::table('skills_dyns')->insert([
             [   
             "span" => "HTML",
-            "i" => "100%",
-            "aria" => "100"
+            "pourcentage" => "100",
             ],
             [   
             "span" => "CSS",
-            "i" => "90%",
-            "aria" => "90"
+            "pourcentage" => "90",
             ],
             [   
             "span" => "JavaScript",
-            "i" => "75%",
-            "aria" => "75"
+            "pourcentage" => "75",
             ],
             [   
             "span" => "PHP",
-            "i" => "80%",
-            "aria" => "80"
+            "pourcentage" => "80",
             ],
             [   
             "span" => "WordPress/CMS",
-            "i" => "90%",
-            "aria" => "90"
+            "pourcentage" => "90",
             ],
             [   
             "span" => "Photoshop",
-            "i" => "55%",
-            "aria" => "55"
+            "pourcentage" => "55",
             ],
             
         ]);
