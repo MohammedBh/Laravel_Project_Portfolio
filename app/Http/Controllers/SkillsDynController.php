@@ -37,14 +37,12 @@ class SkillsDynController extends Controller
     {
         request()->validate([
             'span' => 'required | min:3 | max:15',
-            'i' => ['required', 'min:1', 'max:10'],
-            'aria' => ['required', 'min:1', 'max:15']
+            'pourcentage' => ['required', 'min:1', 'max:10'],
         ]);
 
         $store = new SkillsDyn();
         $store->span = $request->span; 
-        $store->i = $request->i; 
-        $store->aria = $request->aria; 
+        $store->pourcentage = $request->pourcentage; 
         $store->save();
         return redirect('/backoffice/skillsDyn')->with('message', "Element created.");
         

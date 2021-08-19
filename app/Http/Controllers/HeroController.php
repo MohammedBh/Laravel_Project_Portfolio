@@ -68,7 +68,7 @@ class HeroController extends Controller
      * @param  \App\Models\Hero  $hero
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request){
+    public function update(Request $request, $id){
         $update = Hero::find($id);
         $update->h1 = $request->h1;
         $update->p = $request->p;

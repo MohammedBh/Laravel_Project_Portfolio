@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>{{ $portfolio[0]->titrePortfolio }}</h2>
+            <h2>{{ $portfolio[0]->portfolioTitle }}</h2>
             <p>{{ $portfolio[0]->p }}</p>
         </div>
 

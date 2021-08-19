@@ -17,7 +17,7 @@ class HeroSeeder extends Seeder
         DB::table('heroes')->insert([
             [
                 "h1" => "Alex Smith",
-                "p" => "I'm",
+                "p" => "I'm"
             ]
         ]);
     }

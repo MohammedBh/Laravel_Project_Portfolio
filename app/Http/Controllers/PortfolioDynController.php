@@ -37,16 +37,12 @@ class PortfolioDynController extends Controller
     {
         request()->validate([
             'img_portfolio' => 'required | min:3 | max:15',
-            'icon1' => ['required', 'min:3', 'max:15'],
-            'icon2' => ['required', 'min:5', 'max:15']
         ]);
 
         $store = new PortfolioDyn();
         $store->img_portfolio = $request->img_portfolio;
-        $store->icon1 = $request->icon1;
-        $store->icon2 = $request->icon2; 
         $store->save();
-        return redirect('/backoffice/portfolio-dyn')->with('message', "Element created.");
+        return redirect('/backoffice/portfolioDyn')->with('message', "Element created.");
         
     }
 
@@ -83,8 +79,6 @@ class PortfolioDynController extends Controller
     public function update($id, Request $request){
         $update = PortfolioDyn::find($id);
         $update->img_portfolio = $request->img_portfolio; 
-        $update->icon1 = $request->icon1; 
-        $update->icon2 = $request->icon2; 
         $update->save();
         return redirect('/backoffice/portfolioDyn');
     }

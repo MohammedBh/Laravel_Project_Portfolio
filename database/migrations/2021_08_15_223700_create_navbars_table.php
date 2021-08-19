@@ -27,6 +27,7 @@ class CreateNavbarsTable extends Migration
             $table->string('nav3');
             $table->string('nav4');
             $table->string('nav5');
+            $table->string('nav6');
             $table->string('btn_icon');
             $table->timestamps();
         });

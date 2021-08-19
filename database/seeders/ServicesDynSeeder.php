@@ -22,7 +22,7 @@ class ServicesDynSeeder extends Seeder
             excepturi sint occaecati cupiditate non provident"
             ],
 
-            ["icon" =>"cofont-chart-bar-graph",
+            ["icon" =>"icofont-chart-bar-graph",
             "titre" => "Dolor Sitema",
             "para" => "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat tarad limino ata"],

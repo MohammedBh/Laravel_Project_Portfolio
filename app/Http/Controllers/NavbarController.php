@@ -81,6 +81,7 @@ class NavbarController extends Controller
         $update->nav3 = $request->nav3;
         $update->nav4 = $request->nav4;
         $update->nav5 = $request->nav5;
+        $update->nav6 = $request->nav6;
         $update->btn_icon = $request->btn_icon;
         $update->save();
         return redirect('/backoffice/navbar');

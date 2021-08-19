@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Portfolio - Dynamic</a>
+                    <a class="navbar-brand" href="javascript:;">Services - Dynamic</a>
                 </div>
             </div>
         </nav>
@@ -45,34 +45,34 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content bg-secondary">
                                 <div class="modal-header">
-                                    <h5 class="modal-title text-white" id="exampleModalLabel">PORTFOLIO - DYNAMIC</h5>
+                                    <h5 class="modal-title text-white" id="exampleModalLabel">SERVICES - DYNAMIC</h5>
                                 </div>
                                 <div class="modal-body model-lg">
-                                    <form action="/formPortfolio" method="POST">
+                                    <form action="/backoffice/formServices" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Image</label>
+                                            <label for="exampleInputEmail1" class="form-label text-white">Icon</label>
                                             <input type="text" value="{{ old('icon') }}" class="form-control"
                                                 name="icon" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label text-white">Icon 1</label>
+                                            <label for="exampleInputPassword1" class="form-label text-white">Titre</label>
                                             <input type="text" value="{{ old('titre') }}" class="form-control"
                                                 name="titre" id="exampleInputPassword1">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Icon 2</label>
+                                            <label for="exampleInputEmail1" class="form-label text-white">Paragraphe</label>
                                             <textarea type="text" value="{{ old('para') }}" class="form-control"
                                                 name="para" id="exampleInputEmail1"
                                                 aria-describedby="emailHelp"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary text-white">Ajouter</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary mx-2"
+                                                data-dismiss="modal">CANCEL</button>
+                                            <button type="submit" class="btn btn-primary text-white">ADD</button>
+                                        </div>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary mx-2"
-                                        data-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn btn-primary text-white">ADD</button>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +87,9 @@
                                     <thead class=" text-primary">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Image</th>
-                                            <th scope="col">Icone 1</th>
-                                            <th scope="col">Icone 2</th>
+                                            <th scope="col">Icon</th>
+                                            <th scope="col">Titre</th>
+                                            <th scope="col">Paragraphe</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -100,7 +100,7 @@
                                                 <td>{{ $servicesDyns->titre }}</td>
                                                 <td>{{ $servicesDyns->para }}</td>
                                                 <td>
-                                                    <form action="/backoffice/PortfolioDeletec/{{ $servicesDyns->id }}"
+                                                    <form action="/backoffice/ServicesDeletec/{{ $servicesDyns->id }}"
                                                         method="POST">
                                                         @csrf
                                                         @method('DELETE')

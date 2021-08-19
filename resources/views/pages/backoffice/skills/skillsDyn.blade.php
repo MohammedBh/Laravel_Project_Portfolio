@@ -48,30 +48,25 @@
                                     <h5 class="modal-title text-white" id="exampleModalLabel">SKILLS - DYNAMIC</h5>
                                 </div>
                                 <div class="modal-body model-lg">
-                                    <form action="/formSkills" method="POST">
+                                    <form action="/backoffice/formSkills" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Span</label>
+                                            <label for="span" class="form-label text-white">Span</label>
                                             <input type="text" class="form-control" value="{{ old('span') }}" name="span"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                id="span" aria-describedby="emailHelp">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1"
+                                            <label for="pourcentage"
                                                 class="form-label text-white">Pourcentage</label>
-                                            <input type="text" class="form-control" value="{{ old('i') }}" name="i"
-                                                id="exampleInputPassword1">
+                                            <input type="number" class="form-control" value="{{ old('pourcentage') }}" name="pourcentage"
+                                                id="pourcentage">
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Aria</label>
-                                            <textarea type="text" class="form-control" value="{{ old('aria') }}"
-                                                name="aria" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary mx-2"
+                                                data-dismiss="modal">CANCEL</button>
+                                            <button type="submit" class="btn btn-primary text-white">ADD</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary mx-2"
-                                        data-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn btn-primary text-white">ADD</button>
                                 </div>
                             </div>
                         </div>

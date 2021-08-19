@@ -48,29 +48,19 @@
                                     <h5 class="modal-title text-white" id="exampleModalLabel">PORTFOLIO - DYNAMIC</h5>
                                 </div>
                                 <div class="modal-body model-lg">
-                                    <form action="/formPortfolio" method="POST">
+                                    <form action="/backoffice/formPortfolio" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Icon</label>
-                                            <input type="text" class="form-control" value="{{ old('icon') }}" name="icon"
+                                            <label for="exampleInputEmail1" class="form-label text-white">Image</label>
+                                            <input type="text" class="form-control" value="{{ old('img_portfolio') }}" name="img_portfolio"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp">
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label text-white">Titre</label>
-                                            <input type="text" class="form-control" value="{{ old('titre') }}" name="titre"
-                                                id="exampleInputPassword1">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label text-white">Paragraphe</label>
-                                            <textarea type="text" class="form-control" value="{{ old('para') }}" name="para"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary mx-2"
+                                                data-dismiss="modal">CANCEL</button>
+                                            <button type="submit" class="btn btn-primary text-white">ADD</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary mx-2"
-                                        data-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn btn-primary text-white">ADD</button>
                                 </div>
                             </div>
                         </div>

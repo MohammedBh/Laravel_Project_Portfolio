@@ -19,7 +19,6 @@
                     <input type="text" class="form-control" value="{{ $heros->p }}" name="p" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-success">Save</button>

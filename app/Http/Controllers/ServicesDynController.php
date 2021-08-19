@@ -36,7 +36,6 @@ class ServicesDynController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'icon' => 'required | min:3 | max:15',
             'titre' => ['required', 'min:3', 'max:15'],
             'para' => ['required', 'min:10', 'max:35']
         ]);

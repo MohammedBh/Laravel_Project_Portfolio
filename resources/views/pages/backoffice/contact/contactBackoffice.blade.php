@@ -44,7 +44,6 @@
                                                 <td>{{ $contacts->titre2 }}</td>
                                                 <td>{{ $contacts->p2 }}</td>
                                             </tr>
-                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -68,7 +67,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($contacts as $contact)
                                             <tr>
                                                 <th scope="row">{{ $contacts->id }}</th>
                                                 <td>{{ $contacts->icon3 }}</td>

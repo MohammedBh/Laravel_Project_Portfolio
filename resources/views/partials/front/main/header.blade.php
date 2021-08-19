@@ -22,6 +22,7 @@
                     <li><a href="#portfolio"><i class="bx bx-book-content"></i> {{$navbar[0]->nav3}}</a></li>
                     <li><a href="#services"><i class="bx bx-server"></i> {{$navbar[0]->nav4}}</a></li>
                     <li><a href="#contact"><i class="bx bx-envelope"></i> {{$navbar[0]->nav5}}</a></li>
+                    <li><a href="{{route('backoffice')}}"><i class="bx bx-lock"></i> {{$navbar[0]->nav6}}</a></li>
 
                 </ul>
             </nav><!-- .nav-menu -->

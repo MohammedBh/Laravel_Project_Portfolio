@@ -28,6 +28,7 @@ class NavbarSeeder extends Seeder
                 "nav3" => "Portfolio",
                 "nav4" => "Services",
                 "nav5" => "Contact",
+                "nav6" => "Admin",
                 "btn_icon" => "icofont-navigation-menu"
             ]
         ]);
